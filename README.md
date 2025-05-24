@@ -3,5 +3,5 @@ Simple raycaster in Rust
 
 Here is a preview of what this looks like:
 <p align="center">
-  <img src="assets/screenshot.png" alt="screenshot" width="700"/>
+  <img src="assets/screenshot.png" alt="screenshot" width="1000"/>
 </p>
