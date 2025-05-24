@@ -26,6 +26,7 @@ fn main() {
     let mut buffer = vec![0u32; WIDTH * HEIGHT];
     window.set_target_fps(60);
 
+    // Random font from my machine
     let font_data = read("/usr/share/fonts/Adwaita/AdwaitaSans-Regular.ttf").unwrap();
     let font = Font::try_from_vec(font_data).unwrap();
     let scale = Scale::uniform(14.0);
@@ -106,7 +107,6 @@ fn main() {
     }
 }
 
-// 🖋️ Draw UTF-8 text using rusttype into the pixel buffer
 fn draw_text(buffer: &mut [u32], font: &rusttype::Font, scale: rusttype::Scale, x: usize, y: usize, text: &str, color: u32) {
     let v_metrics = font.v_metrics(scale);
     let offset = point(x as f32, y as f32 + v_metrics.ascent);
